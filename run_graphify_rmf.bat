@@ -10,10 +10,10 @@ REM ============================================================
 setlocal
 
 REM -- Change this if your project is in a different location --
-set PROJECT=C:\Users\Zeplman\Documents\Leo's Brain\03 - Projects\RMF Commander
+set "PROJECT=C:\Users\Zeplman\Documents\Leo's Brain\03 - Projects\RMF Commander"
 
 echo.
-echo  RMF Commander  graphify  Obsidian
+echo  RMF Commander  ^>  graphify  ^>  Obsidian
 echo  Project: %PROJECT%
 echo.
 
@@ -21,7 +21,9 @@ python "%~dp0graphify_rmf.py" --project "%PROJECT%"
 
 if %ERRORLEVEL% NEQ 0 (
     echo.
-    echo  Something went wrong. See errors above.
+    echo  ============================================================
+    echo  Something went wrong. Read the errors above to see why.
+    echo  ============================================================
     pause
     exit /b %ERRORLEVEL%
 )
